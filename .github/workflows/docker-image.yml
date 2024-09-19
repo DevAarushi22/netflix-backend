@@ -22,7 +22,7 @@ jobs:
 
       - name: Build and Push Docker image
         run: |
-          IMAGE_NAME=aarushi/netflix_movie_catalog
+          IMAGE_NAME=aarushi2205/netflix_movie_catalog
           VERSION=$(date +'%Y%m%d%H%M%S')
           docker build -t $IMAGE_NAME:$VERSION .
           docker tag $IMAGE_NAME:$VERSION $IMAGE_NAME:latest
