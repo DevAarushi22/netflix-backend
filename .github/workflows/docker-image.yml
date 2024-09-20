@@ -42,8 +42,8 @@ jobs:
             echo "Using IMAGE_NAME: $IMAGE_NAME"
             sudo docker pull $IMAGE_NAME:latest
             echo "Stopping and removing old container"
-            sudo docker stop $(docker ps -q) || true
-            sudo docker rm $(docker ps -a -q) || true
+            sudo docker stop backend || true
+            sudo docker rm backend || true
             sudo docker run -d --name backend -p 8080:8080 $IMAGE_NAME:latest
             echo "Running new container"
           EOF
